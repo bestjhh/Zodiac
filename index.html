@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/rem2.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/canvas2Image.js"></script>
+    <title>集生肖抽大奖丨开年就是旺旺旺</title>
+</head>
+<body>
+    <div class="fakeloader" >
+    <div class="spinner2">
+        <div class="spinner-container container1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+    </div>
+</div>
+
+    <div id="index">
+        <!--填写资料-->
+        <div class="fill-information fixed" style="display: none">
+            <section>
+                <h2>领奖资料填写</h2>
+                <form action="">
+                    <input type="text" class="userName" value="Tom" placeholder="姓名"/>
+                    <input type="text" class="phoneNumber" value="13272651430" placeholder="手机号码"/>
+                    <input type="button" class="info-submit" value="确定">
+                </form>
+                <p>请填写有效信息，以便奖品发放</p>
+            </section>
+        </div>
+        <!--规则-->
+        <div class="rule-btn">
+            <a onclick="$('.rule').fadeIn()">规则</a>
+            <div class="clearFloat"></div>
+            <div class="rule fixed">
+                <section>
+                    <div class="lots-title">
+                        <span data-txt="活"></span>
+                        <span data-txt="动"></span>
+                        <span data-txt="规"></span>
+                        <span data-txt="则"></span>
+                    </div>
+                    <div class="rule-list">
+                        <h5>活动玩法</h5>
+                        <p>进入参与活动，点击或者摇晃手机即可参与抽签</p>
+                        <p>每天有4次抽签机会，分享朋友圈和好友各获得 1次，每天共有6次抽签机会，可选择生肖卡生 成图片保存分享朋友圈 </p>
+                        <p>集齐12张生肖信用卡即可获得一次抽奖机会</p>
+                        <h5>奖项设置</h5>
+                        <p class="prize"><span>特等奖</span><span>华为mate20Pro</span><span>5名</span></p>
+                        <p class="prize"><span>一等奖</span><span>200元话费</span><span>20名</span></p>
+                        <p class="prize"><span>二等奖</span><span>10元话费</span><span>500名</span></p>
+                        <p class="prize"><span>三等奖</span><span>随机红包</span><span>若干名</span></p>
+                        <aside>注：奖励在规定时间内自动发放，请注意查收</aside>
+                    </div>
+                    <i class="cancel" onclick="$('.rule').fadeOut()"></i>
+                </section>
+            </div>
+        </div>
+        <!--抽签筒-->
+        <div class="drum">
+            <div class="drum-img"></div>
+            <div class="lots-btn" onclick="$('.my-lots').fadeIn()">
+                <span data-txt="我"></span>
+                <span data-txt="的"></span>
+                <span data-txt="旺"></span>
+                <span data-txt="签"></span>
+            </div>
+            <div class="my-lots fixed">
+                <section>
+                    <div class="lots-title">
+                        <span data-txt="我"></span>
+                        <span data-txt="的"></span>
+                        <span data-txt="旺"></span>
+                        <span data-txt="签"></span>
+                    </div>
+                    <div class="list-title">
+                        <b>生肖旺签</b><b>拥有数量</b>
+                    </div>
+                    <ul>
+                        <li>
+                            <span><img src="img/zo-rat.png" alt=""></span>
+                            <b>1</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-cow.png" alt=""></span>
+                            <b>0</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-tigger.png" alt=""></span>
+                            <b>1</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-rabbit.png" alt=""></span>
+                            <b>1</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-dragon.png" alt=""></span>
+                            <b>1</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-snake.png" alt=""></span>
+                            <b>1</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-horse.png" alt=""></span>
+                            <b>0</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-sheep.png" alt=""></span>
+                            <b>2</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-monkey.png" alt=""></span>
+                            <b>1</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-chicken.png" alt=""></span>
+                            <b>0</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-dog.png" alt=""></span>
+                            <b>1</b>
+                        </li>
+                        <li>
+                            <span><img src="img/zo-pig.png" alt=""></span>
+                            <b>3</b>
+                        </li>
+                    </ul>
+                    <p>
+                        集齐十二生肖旺签即可参与抽奖哟
+                        <!--十二生肖旺签已集齐,获得<b>1</b>次抽奖机会-->
+                    </p>
+                    <div class="draw-btn" onclick="$('.prize').fadeIn();">立即抽奖</div>
+                    <i class="cancel" onclick="$('.my-lots').fadeOut()"></i>
+                </section>
+            </div>
+            <!--开始抽签-->
+            <div class="extract-btn">开始<i></i>旺签</div>
+        </div>
+        <!--中奖啦-->
+        <div class="prize fixed">
+            <section>
+                <div hidden>
+                    现金红包<b>2<span>元</span></b>
+                    <p>现金红包在活动规定时间内自动发放</p>
+                </div>
+                <!--话费-->
+                <div>
+                    话费充值<b>10<span>元</span></b>
+                    <p>话费由工作人员在规定时间进行充值</p>
+                </div>
+                <i class="cancel" onclick="$('.prize').fadeOut()"></i>
+            </section>
+        </div>
+        <!--抽签中-->
+        <div class="drum2">
+            <div class="drum-img2"></div>
+            <p>旺签抽取中<span></span><span></span><span></span></p>
+        </div>
+        <div class="messageBox"></div>
+    </div>
+    <!--我的旺签-->
+    <div id="lots">
+        <div class="my-goodLot">
+            <div class="lot-txt">
+                <p>您的旺签是：<b></b></p>
+                <p class="saying"></p>
+            </div>
+            <div class="lot-img">
+                <div class="img up"></div>
+            </div>
+            <div class="bottom-cloud"></div>
+        </div>
+        <div class="btns">
+            <div class="onceAgain" onclick="window.location.href=window.location.href+'?id='+10000*Math.random();">再试一次</div>
+            <div class="createPicture">生成图片</div>
+        </div>
+        <aside class="save-txt">长按保存图片</aside>
+    </div>
+</body>
+<script>
+    $(function(){
+        // 填写电话信息
+        var regPhone = /^1[356789][\d]{9}$/;
+        $(".info-submit").on("click",function(){
+            var username = $(".userName").val();
+            var phonenumber = $(".phoneNumber").val();
+            if(username == ""){
+                $(".messageBox").html("姓名不能为空").show().delay(1000).fadeOut();
+                return false;
+            }
+            if(phonenumber == ""){
+                $(".messageBox").html("请输入手机号").show().delay(1000).fadeOut();
+                return false;
+            }
+            if(!regPhone.test(phonenumber) && phonenumber != ""){
+                $(".messageBox").html("手机号输入有误").show().delay(1000).fadeOut();
+                return false;
+            }
+            $(".messageBox").html("信息提交成功").show().delay(500).fadeOut(function(){
+                $(".fill-information").hide()
+            });
+        });
+        // 开始抽签
+        $(".extract-btn").on("click",function(){
+            draw();
+        });
+        var id = 10;
+        // 抽签的方法
+        var dataLots = [
+            {id:1,animal:"鼠",class:"rat",txt:"数（鼠）一数二"},
+            {id:2,animal:"牛",class:"cow",txt:"扭（牛）转乾坤"},
+            {id:3,animal:"虎",class:"tigger",txt:"虎虎生威"},
+            {id:4,animal:"兔",class:"rabbit",txt:"前途（兔）无量"},
+            {id:5,animal:"龙",class:"dragon",txt:"八面玲珑（龙）"},
+            {id:6,animal:"蛇",class:"snake",txt:"慧心妙舌（蛇）"},
+            {id:7,animal:"马",class:"horse",txt:"马到成功"},
+            {id:8,animal:"羊",class:"sheep",txt:"神采飞扬（羊）"},
+            {id:9,animal:"猴",class:"monkey",txt:"得天独厚（猴）"},
+            {id:10,animal:"鸡",class:"chicken",txt:"灵机（鸡）一动"},
+            {id:11,animal:"狗",class:"dog",txt:"智勇双全（犬）"},
+            {id:12,animal:"猪",class:"pig",txt:"中流砥柱（猪）"}
+        ];
+        var sharkBoolean = true;// 禁止在抽签过程中再次触发摇一摇
+        function draw(){
+            sharkBoolean = false;
+            $('.drum').hide();
+            $(".my-goodLot .lot-txt b").html(dataLots[id-1].animal);
+            $(".saying").html(dataLots[id-1].txt);
+            $(".my-goodLot .lot-img .img").addClass(dataLots[id-1].class);
+            $('.drum2').show().delay(1500).fadeOut(function(){
+                $('#index').hide();
+                $("#lots").show();
+                sharkBoolean = true;
+            });
+        }
+        // 生成图片
+        $(".createPicture").on("click",function() {
+            $(".lot-img .img").removeClass("up");
+            var cntElem = $('.my-goodLot')[0];
+            var shareContent = cntElem;//需要截图的包裹的（原生的）DOM 对象
+            var width = shareContent.offsetWidth; //获取dom 宽度
+            var height = shareContent.offsetHeight; //获取dom 高度
+            var canvas = document.createElement("canvas"); //创建一个canvas节点
+            var scale = 2; //定义任意放大倍数 支持小数
+            canvas.width = width * scale; //定义canvas 宽度 * 缩放
+            canvas.height = height * scale; //定义canvas高度 *缩放
+            canvas.getContext("2d").scale(scale, scale); //获取context,设置scale
+            var opts = {
+                scale: scale, // 添加的scale 参数
+                canvas: canvas, //自定义 canvas
+                // logging: true, //日志开关，便于查看html2canvas的内部执行流程
+                width: width, //dom 原始宽度
+                height: height,
+                useCORS: true // 【重要】开启跨域配置
+            };
+            html2canvas(shareContent, opts).then(function (canvas) {
+                var context = canvas.getContext('2d');
+                // 【重要】关闭抗锯齿
+                context.mozImageSmoothingEnabled = false;
+                context.webkitImageSmoothingEnabled = false;
+                context.msImageSmoothingEnabled = false;
+                context.imageSmoothingEnabled = false;
+                // 【重要】默认转化的格式为png,也可设置为其他格式
+                var img = Canvas2Image.saveAsPNG(canvas, canvas.width, canvas.height);
+                document.body.appendChild(img);
+                $(".save-txt").show();//显示长按保存
+                $(img).css({
+                    "width": canvas.width / 2 + "px",
+                    "height": canvas.height / 2 + "px",
+                    "position":"fixed",
+                    "top":"0",
+                    "left":"0",
+                    "opacity":"1",
+                    "z-index":222
+                }).addClass('f-full').on("click",function(){
+                    $(".save-txt").hide();
+                    $(this).remove();
+                });
+            });
+        });
+
+        // 摇一摇事件
+        var phoneBoolean =  true;// 防止在填写电话号码之前触发摇一摇事件
+        var shakeThreshold = 1500; // 定义一个摇动的阈值
+        var lastUpdate = 0; // 记录上一次摇动的时间
+        var x, y, z, lastX, lastY, lastZ; // 定义x、y、z记录三个轴的数据以及上一次触发的数据
+
+        // 监听传感器运动事件
+        if (window.DeviceMotionEvent) {
+            window.addEventListener('devicemotion', deviceMotionHandler, false);
+        } else {
+            alert('天呐，你的手机竟然还不支持摇一摇ヾ(◍°∇°◍)ﾉﾞ，你也可以点击下方的“开始旺签”参与抽奖');
+        }
+        // 运动传感器处理
+        function deviceMotionHandler(eventData) {
+            if(phoneBoolean && sharkBoolean){
+                var acceleration = eventData.accelerationIncludingGravity; // 获取含重力的加速度
+                var curTime = new Date().getTime();
+                // 100毫秒进行一次位置判断
+                if ((curTime - lastUpdate) > 100) {
+                    var diffTime = curTime - lastUpdate;
+                    lastUpdate = curTime;
+                    x = acceleration.x;
+                    y = acceleration.y;
+                    z = acceleration.z;
+                    var speed = Math.abs(x + y + z - lastX - lastY - lastZ) / diffTime * 10000;
+                    if (speed > shakeThreshold) {
+                        //摇一摇触发
+                        draw();
+                    }
+                    lastX = x;
+                    lastY = y;
+                    lastZ = z;
+                }
+            }
+        }
+    });
+    document.onreadystatechange = completeLoading;
+    function completeLoading() {
+        if (document.readyState == "complete") {
+            $('.fakeloader').hide();
+        }
+    }
+</script>
+</html>

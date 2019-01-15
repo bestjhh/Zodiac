@@ -248,7 +248,7 @@
             $(".my-goodLot .lot-txt b").html(dataLots[id-1].animal);
             $(".saying").html(dataLots[id-1].txt);
             $(".my-goodLot .lot-img .img").addClass(dataLots[id-1].class);
-            $('.drum2').show().delay(1500).fadeOut(function(){
+            $('.drum2').show().delay(2000).fadeOut(function(){
                 $('#index').hide();
                 $("#lots").show();
                 sharkBoolean = true;
@@ -302,7 +302,7 @@
 
         // 摇一摇事件
         var phoneBoolean =  true;// 防止在填写电话号码之前触发摇一摇事件
-        var shakeThreshold = 1500; // 定义一个摇动的阈值
+        var shakeThreshold = 2000; // 定义一个摇动的阈值
         var lastUpdate = 0; // 记录上一次摇动的时间
         var x, y, z, lastX, lastY, lastZ; // 定义x、y、z记录三个轴的数据以及上一次触发的数据
 

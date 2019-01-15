@@ -37,7 +37,7 @@
 
     <div id="index">
         <!--填写资料-->
-        <div class="fill-information fixed" style="display: none">
+        <div class="fill-information fixed">
             <section>
                 <h2>领奖资料填写</h2>
                 <form action="">
@@ -201,6 +201,7 @@
 <script>
     $(function(){
         // 填写电话信息
+        var phoneBoolean =  false;// 是否填写电话号码，防止在填写之前触发摇一摇事件
         var regPhone = /^1[356789][\d]{9}$/;
         $(".info-submit").on("click",function(){
             var username = $(".userName").val();
@@ -218,7 +219,8 @@
                 return false;
             }
             $(".messageBox").html("信息提交成功").show().delay(500).fadeOut(function(){
-                $(".fill-information").hide()
+                $(".fill-information").hide();
+                phoneBoolean = true;
             });
         });
         // 开始抽签
@@ -241,7 +243,7 @@
             {id:11,animal:"狗",class:"dog",txt:"智勇双全（犬）"},
             {id:12,animal:"猪",class:"pig",txt:"中流砥柱（猪）"}
         ];
-        var sharkBoolean = true;// 禁止在抽签过程中再次触发摇一摇
+        var sharkBoolean = true; // 禁止在抽签过程中再次触发摇一摇
         function draw(){
             sharkBoolean = false;
             $('.drum').hide();
@@ -301,7 +303,6 @@
         });
 
         // 摇一摇事件
-        var phoneBoolean =  true;// 防止在填写电话号码之前触发摇一摇事件
         var shakeThreshold = 2000; // 定义一个摇动的阈值
         var lastUpdate = 0; // 记录上一次摇动的时间
         var x, y, z, lastX, lastY, lastZ; // 定义x、y、z记录三个轴的数据以及上一次触发的数据

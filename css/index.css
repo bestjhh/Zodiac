@@ -320,6 +320,11 @@ body {
   border-right: 1px solid #F5B8A0;
   box-sizing: border-box;
 }
+#index .drum .my-lots section ul {
+  max-height: 6.25rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 #index .drum .my-lots section ul li {
   border-top: 1px solid #F08F48;
   box-sizing: border-box;

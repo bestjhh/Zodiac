@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+input,
 input[type='button'],
 button {
   -webkit-appearance: none;
@@ -60,6 +61,7 @@ ul {
 body {
   background: url(../img/body-bg.png) #C70529 repeat-y;
   background-size: 100% auto;
+  -webkit-overflow-scrolling: touch;
 }
 #index {
   width: 100%;

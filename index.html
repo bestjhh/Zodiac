@@ -227,7 +227,7 @@
         $(".extract-btn").on("click",function(){
             draw();
         });
-        var id = 10;
+        var id = Math.floor(Math.random()*11+1);//控制抽到的生肖
         // 抽签的方法
         var dataLots = [
             {id:1,animal:"鼠",class:"rat",txt:"数（鼠）一数二"},

@@ -671,7 +671,7 @@ body {
 }
 #lots .btns div {
   height: 0.9rem;
-  line-height: 0.8rem;
+  line-height: 0.88rem;
   background: url("../img/btn-bg2.png") no-repeat;
   background-size: 100% 100%;
   margin: 0 0.15rem;

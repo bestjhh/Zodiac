@@ -577,6 +577,8 @@ body{
       .img{
         height: 10rem;
         margin: 0 auto;
+        text-align: center;
+        background: none;
         &.up{
           animation: up .8s linear;
         }
@@ -638,6 +640,13 @@ body{
         background-size: auto 100%;
       }
     }
+    .ewmShow{
+      display: none;width: 100%;height: 2rem; position: absolute;bottom: 0;left: 0;text-align: center;z-index: 55;
+      div{
+        vertical-align: top;color: #CA0529;font-size: .24rem; text-align: left;display: inline-block;margin: 0.7rem 1.5rem 0 0;
+      }
+      img{height: 1.5rem; margin-top: .25rem;}
+    }
   }
   .bottom-cloud{
     height: 3rem;
@@ -646,8 +655,11 @@ body{
     bottom: 0;
     z-index: 3;
     width: 100%;
-    background: url("../img/bottom-cloud.png") no-repeat;
-    background-size: 100% 100%;
+    //background: url("../img/bottom-cloud.png") no-repeat;
+    //background-size: 100% 100%;
+    img{
+      width: 100%;height: 100%
+    }
   }
   .btns{
     padding: 0 .3rem .55rem;

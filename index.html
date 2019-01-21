@@ -181,21 +181,32 @@
     </div>
     <!--我的旺签-->
     <div id="lots">
-        <div class="my-goodLot">
+        <div class="my-goodLot" style="padding-top: .8rem">
             <div class="lot-txt">
-                <p>您的旺签是：<b></b></p>
+                <p>zhangshan的新年旺签<c>是：<b></b></c></p>
                 <p class="saying"></p>
             </div>
             <div class="lot-img">
-                <div class="img up"></div>
+                <div class="img up" style="">
+                    <img src="img/lot-chicken.png" alt="" style="height: 100%;width: auto;">
+                </div>
             </div>
-            <div class="bottom-cloud"></div>
+            <div class="bottom-cloud">
+                <img src="img/bottom-cloud.png" alt="">
+            </div>
+            <section class="ewmShow">
+                <div>
+                    识别右侧二维码<br>
+                    快来抽取你的新年旺签吧！
+                </div>
+                <img src="img/ewm.png" alt="" >
+            </section>
         </div>
         <div class="btns">
-            <div class="onceAgain" onclick="window.location.href=window.location.href+'?id='+10000*Math.random();">再试一次</div>
+            <div class="onceAgain" onclick="$('#lots').hide();$('#index,.drum').show()">再试一次</div>
             <div class="createPicture">生成图片</div>
         </div>
-        <aside class="save-txt">长按保存图片</aside>
+        <aside class="save-txt" style="bottom:1.5rem">长按保存图片</aside>
     </div>
 </body>
 <script>
@@ -249,7 +260,7 @@
             $('.drum').hide();
             $(".my-goodLot .lot-txt b").html(dataLots[id-1].animal);
             $(".saying").html(dataLots[id-1].txt);
-            $(".my-goodLot .lot-img .img").addClass(dataLots[id-1].class);
+            $(".my-goodLot .lot-img .img img").attr("src","img/lot-"+dataLots[id-1].class+".png");
             $('.drum2').show().delay(2000).fadeOut(function(){
                 $('#index').hide();
                 $("#lots").show();
@@ -258,6 +269,8 @@
         }
         // 生成图片
         $(".createPicture").on("click",function() {
+            $(".ewmShow").show();
+            $(".lot-txt c").hide();
             $(".lot-img .img").removeClass("up");
             var cntElem = $('.my-goodLot')[0];
             var shareContent = cntElem;//需要截图的包裹的（原生的）DOM 对象
@@ -298,6 +311,7 @@
                 }).addClass('f-full').on("click",function(){
                     $(".save-txt").hide();
                     $(this).remove();
+                    $(".ewmShow").hide();
                 });
             });
         });

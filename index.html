@@ -260,32 +260,32 @@
         var voice = document.getElementById('m_bg_music');
         //判斷 WeixinJSBridge 是否存在
         if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-            voice.play();
+//            voice.play();
         } else {
             //監聽客户端抛出事件"WeixinJSBridgeReady"
             if (document.addEventListener) {
                 document.addEventListener("WeixinJSBridgeReady", function() {
-                    voice.play();
+//                    voice.play();
                 }, false);
             } else if (document.attachEvent) {
                 document.attachEvent("WeixinJSBridgeReady", function() {
-                    voice.play();
+//                    voice.play();
                 });
                 document.attachEvent("onWeixinJSBridgeReady", function() {
-                    voice.play();
+//                    voice.play();
                 });
             }
         }
 
-        //voiceStatu用來記録狀態,使 touchstart 事件只能觸發一次有效,避免與 click 事件衝突
-        var voiceStatu = true;
-        //监听 touchstart 事件进而调用 <audio> 元素提供的 play() 方法播放音频
-        document.addEventListener("touchstart", function(e) {
-            if (voiceStatu) {
-                voice.play();
-                voiceStatu = false;
-            }
-        }, false);
+//        //voiceStatu用來記録狀態,使 touchstart 事件只能觸發一次有效,避免與 click 事件衝突
+//        var voiceStatu = true;
+//        //监听 touchstart 事件进而调用 <audio> 元素提供的 play() 方法播放音频
+//        document.addEventListener("touchstart", function(e) {
+//            if (voiceStatu) {
+//                voice.play();
+//                voiceStatu = false;
+//            }
+//        }, false);
 
 
 //        $('.musicPlay').click(function() {
@@ -309,7 +309,7 @@
             $(".my-goodLot .lot-txt b").html(dataLots[id-1].animal);
             $(".saying").html(dataLots[id-1].txt);
             $(".my-goodLot .lot-img .img img").attr("src","img/lot-"+dataLots[id-1].class+".png");
-            setTimeout(function(){voice.play();;},1000);
+            setTimeout(function(){voice.play();},1000);
             $('.drum2').show().delay(2000).fadeOut(function(){
                 $('#index').hide();
                 $("#lots").show();

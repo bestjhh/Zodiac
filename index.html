@@ -260,19 +260,19 @@
         var voice = document.getElementById('m_bg_music');
         //判斷 WeixinJSBridge 是否存在
         if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-//            voice.play();
+            voice.pause();
         } else {
             //監聽客户端抛出事件"WeixinJSBridgeReady"
             if (document.addEventListener) {
                 document.addEventListener("WeixinJSBridgeReady", function() {
-//                    voice.play();
+                    voice.pause();
                 }, false);
             } else if (document.attachEvent) {
                 document.attachEvent("WeixinJSBridgeReady", function() {
-//                    voice.play();
+                    voice.pause();
                 });
                 document.attachEvent("onWeixinJSBridgeReady", function() {
-//                    voice.play();
+                    voice.pause();
                 });
             }
         }

@@ -289,6 +289,13 @@
             }
         }, false);
 
+        function audioAutoPlay() {
+            var audio = document.getElementById('kaCi');
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+        };
         function draw(){
             sharkBoolean = false;
             $('.drum').hide();
@@ -296,13 +303,7 @@
             $(".saying").html(dataLots[id-1].txt);
             $(".my-goodLot .lot-img .img img").attr("src","img/lot-"+dataLots[id-1].class+".png");
             setTimeout(function(){
-//                (function audioAutoPlay() {
-                    var audio = document.getElementById('kaCi');
-                    audio.play();
-                    document.addEventListener("WeixinJSBridgeReady", function () {
-                        audio.play();
-                    }, false);
-//                })();
+                audioAutoPlay();
             },1000);
             $('.drum2').show().delay(2000).fadeOut(function(){
                 $('#index').hide();

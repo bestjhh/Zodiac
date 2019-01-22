@@ -12,7 +12,7 @@
     <title>集生肖抽大奖丨开年就是旺旺旺</title>
 </head>
 <body>
-    <div class="fakeloader" >
+<div class="fakeloader" >
     <div class="spinner2">
         <div class="spinner-container container1">
             <div class="circle1"></div>
@@ -34,180 +34,181 @@
         </div>
     </div>
 </div>
-    <audio id="m_bg_music" src="img/5018.wav" hidden></audio>
-    <div id="index">
-        <!--填写资料-->
-        <div class="fill-information fixed">
-            <section>
-                <h2>领奖资料填写</h2>
-                <form action="">
-                    <input type="text" class="userName" value="Tom" placeholder="姓名"/>
-                    <input type="text" class="phoneNumber" value="13272651430" placeholder="手机号码"/>
-                    <input type="button" class="info-submit" value="确定">
-                </form>
-                <p>请填写有效信息，以便奖品发放</p>
-            </section>
-        </div>
-        <!--规则-->
-        <div class="rule-btn">
-            <a onclick="$('.rule').fadeIn()">规则</a>
-            <div class="clearFloat"></div>
-            <div class="rule fixed">
-                <section>
-                    <div class="lots-title">
-                        <span data-txt="活"></span>
-                        <span data-txt="动"></span>
-                        <span data-txt="规"></span>
-                        <span data-txt="则"></span>
-                    </div>
-                    <div class="rule-list">
-                        <h5>活动玩法</h5>
-                        <p>进入参与活动，点击或者摇晃手机即可参与抽签</p>
-                        <p>每天有4次抽签机会，分享朋友圈和好友各获得 1次，每天共有6次抽签机会，可选择生肖卡生 成图片保存分享朋友圈 </p>
-                        <p>集齐12张生肖信用卡即可获得一次抽奖机会</p>
-                        <h5>奖项设置</h5>
-                        <p class="prize"><span>特等奖</span><span>华为mate20Pro</span><span>5名</span></p>
-                        <p class="prize"><span>一等奖</span><span>200元话费</span><span>20名</span></p>
-                        <p class="prize"><span>二等奖</span><span>10元话费</span><span>500名</span></p>
-                        <p class="prize"><span>三等奖</span><span>随机红包</span><span>若干名</span></p>
-                        <aside>注：奖励在规定时间内自动发放，请注意查收</aside>
-                    </div>
-                    <i class="cancel" onclick="$('.rule').fadeOut()"></i>
-                </section>
-            </div>
-        </div>
-        <!--抽签筒-->
-        <div class="drum">
-            <div class="drum-img"></div>
-            <div class="lots-btn" onclick="$('.my-lots').fadeIn()">
-                <span data-txt="我"></span>
-                <span data-txt="的"></span>
-                <span data-txt="旺"></span>
-                <span data-txt="签"></span>
-            </div>
-            <div class="my-lots fixed">
-                <section>
-                    <div class="lots-title">
-                        <span data-txt="我"></span>
-                        <span data-txt="的"></span>
-                        <span data-txt="旺"></span>
-                        <span data-txt="签"></span>
-                    </div>
-                    <div class="list-title">
-                        <b>生肖旺签</b><b>拥有数量</b>
-                    </div>
-                    <ul>
-                        <li>
-                            <span><img src="img/zo-rat.png" alt=""></span>
-                            <b>1</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-cow.png" alt=""></span>
-                            <b>0</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-tigger.png" alt=""></span>
-                            <b>1</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-rabbit.png" alt=""></span>
-                            <b>1</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-dragon.png" alt=""></span>
-                            <b>1</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-snake.png" alt=""></span>
-                            <b>1</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-horse.png" alt=""></span>
-                            <b>0</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-sheep.png" alt=""></span>
-                            <b>2</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-monkey.png" alt=""></span>
-                            <b>1</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-chicken.png" alt=""></span>
-                            <b>0</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-dog.png" alt=""></span>
-                            <b>1</b>
-                        </li>
-                        <li>
-                            <span><img src="img/zo-pig.png" alt=""></span>
-                            <b>3</b>
-                        </li>
-                    </ul>
-                    <p>
-                        集齐十二生肖旺签即可参与抽奖哟
-                        <!--十二生肖旺签已集齐,获得<b>1</b>次抽奖机会-->
-                    </p>
-                    <div class="draw-btn" onclick="$('.prize').fadeIn();">立即抽奖</div>
-                    <i class="cancel" onclick="$('.my-lots').fadeOut()"></i>
-                </section>
-            </div>
-            <!--开始抽签-->
-            <div class="extract-btn">开始<i></i>旺签</div>
-        </div>
-        <!--中奖啦-->
-        <div class="prize fixed">
-            <section>
-                <div hidden>
-                    现金红包<b>2<span>元</span></b>
-                    <p>现金红包在活动规定时间内自动发放</p>
-                </div>
-                <!--话费-->
-                <div>
-                    话费充值<b>10<span>元</span></b>
-                    <p>话费由工作人员在规定时间进行充值</p>
-                </div>
-                <i class="cancel" onclick="$('.prize').fadeOut()"></i>
-            </section>
-        </div>
-        <!--抽签中-->
-        <div class="drum2">
-            <div class="drum-img2"></div>
-            <p>旺签抽取中<span></span><span></span><span></span></p>
-        </div>
-        <div class="messageBox"></div>
+<audio id="m_bg_music" src="img/bgm.mp3" hidden loop></audio>
+<audio id="kaCi" src="img/5018.wav" hidden></audio>
+<div id="index">
+    <!--填写资料-->
+    <div class="fill-information fixed">
+        <section>
+            <h2>领奖资料填写</h2>
+            <form action="">
+                <input type="text" class="userName" value="Tom" placeholder="姓名"/>
+                <input type="text" class="phoneNumber" value="13272651430" placeholder="手机号码"/>
+                <input type="button" class="info-submit" value="确定">
+            </form>
+            <p>请填写有效信息，以便奖品发放</p>
+        </section>
     </div>
-    <!--我的旺签-->
-    <div id="lots">
-        <div class="my-goodLot" style="padding-top: .8rem">
-            <div class="lot-txt">
-                <p>zhangshan的新年旺签<c>是：<b></b></c></p>
-                <p class="saying"></p>
-            </div>
-            <div class="lot-img">
-                <div class="img up" style="">
-                    <img src="img/lot-chicken.png" alt="" style="height: 100%;width: auto;">
+    <!--规则-->
+    <div class="rule-btn">
+        <a onclick="$('.rule').fadeIn()">规则</a>
+        <div class="clearFloat"></div>
+        <div class="rule fixed">
+            <section>
+                <div class="lots-title">
+                    <span data-txt="活"></span>
+                    <span data-txt="动"></span>
+                    <span data-txt="规"></span>
+                    <span data-txt="则"></span>
                 </div>
-            </div>
-            <div class="bottom-cloud">
-                <img src="img/bottom-cloud.png" alt="">
-            </div>
-            <section class="ewmShow">
-                <div>
-                    识别右侧二维码<br>
-                    快来抽取你的新年旺签吧！
+                <div class="rule-list">
+                    <h5>活动玩法</h5>
+                    <p>进入参与活动，点击或者摇晃手机即可参与抽签</p>
+                    <p>每天有4次抽签机会，分享朋友圈和好友各获得 1次，每天共有6次抽签机会，可选择生肖卡生 成图片保存分享朋友圈 </p>
+                    <p>集齐12张生肖信用卡即可获得一次抽奖机会</p>
+                    <h5>奖项设置</h5>
+                    <p class="prize"><span>特等奖</span><span>华为mate20Pro</span><span>5名</span></p>
+                    <p class="prize"><span>一等奖</span><span>200元话费</span><span>20名</span></p>
+                    <p class="prize"><span>二等奖</span><span>10元话费</span><span>500名</span></p>
+                    <p class="prize"><span>三等奖</span><span>随机红包</span><span>若干名</span></p>
+                    <aside>注：奖励在规定时间内自动发放，请注意查收</aside>
                 </div>
-                <img src="img/ewm.png" alt="" >
+                <i class="cancel" onclick="$('.rule').fadeOut()"></i>
             </section>
         </div>
-        <div class="btns">
-            <div class="onceAgain" onclick="$('#lots').hide();$('#index,.drum').show()">再试一次</div>
-            <div class="createPicture">生成图片</div>
-        </div>
-        <aside class="save-txt" style="bottom:1.5rem">长按保存图片</aside>
     </div>
+    <!--抽签筒-->
+    <div class="drum">
+        <div class="drum-img"></div>
+        <div class="lots-btn" onclick="$('.my-lots').fadeIn()">
+            <span data-txt="我"></span>
+            <span data-txt="的"></span>
+            <span data-txt="旺"></span>
+            <span data-txt="签"></span>
+        </div>
+        <div class="my-lots fixed">
+            <section>
+                <div class="lots-title">
+                    <span data-txt="我"></span>
+                    <span data-txt="的"></span>
+                    <span data-txt="旺"></span>
+                    <span data-txt="签"></span>
+                </div>
+                <div class="list-title">
+                    <b>生肖旺签</b><b>拥有数量</b>
+                </div>
+                <ul>
+                    <li>
+                        <span><img src="img/zo-rat.png" alt=""></span>
+                        <b>1</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-cow.png" alt=""></span>
+                        <b>0</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-tigger.png" alt=""></span>
+                        <b>1</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-rabbit.png" alt=""></span>
+                        <b>1</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-dragon.png" alt=""></span>
+                        <b>1</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-snake.png" alt=""></span>
+                        <b>1</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-horse.png" alt=""></span>
+                        <b>0</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-sheep.png" alt=""></span>
+                        <b>2</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-monkey.png" alt=""></span>
+                        <b>1</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-chicken.png" alt=""></span>
+                        <b>0</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-dog.png" alt=""></span>
+                        <b>1</b>
+                    </li>
+                    <li>
+                        <span><img src="img/zo-pig.png" alt=""></span>
+                        <b>3</b>
+                    </li>
+                </ul>
+                <p>
+                    集齐十二生肖旺签即可参与抽奖哟
+                    <!--十二生肖旺签已集齐,获得<b>1</b>次抽奖机会-->
+                </p>
+                <div class="draw-btn" onclick="$('.prize').fadeIn();">立即抽奖</div>
+                <i class="cancel" onclick="$('.my-lots').fadeOut()"></i>
+            </section>
+        </div>
+        <!--开始抽签-->
+        <div class="extract-btn">开始<i></i>旺签</div>
+    </div>
+    <!--中奖啦-->
+    <div class="prize fixed">
+        <section>
+            <div hidden>
+                现金红包<b>2<span>元</span></b>
+                <p>现金红包在活动规定时间内自动发放</p>
+            </div>
+            <!--话费-->
+            <div>
+                话费充值<b>10<span>元</span></b>
+                <p>话费由工作人员在规定时间进行充值</p>
+            </div>
+            <i class="cancel" onclick="$('.prize').fadeOut()"></i>
+        </section>
+    </div>
+    <!--抽签中-->
+    <div class="drum2">
+        <div class="drum-img2"></div>
+        <p>旺签抽取中<span></span><span></span><span></span></p>
+    </div>
+    <div class="messageBox"></div>
+</div>
+<!--我的旺签-->
+<div id="lots">
+    <div class="my-goodLot" style="padding-top: .8rem">
+        <div class="lot-txt">
+            <p>zhangshan的新年旺签<c>是：<b></b></c></p>
+            <p class="saying"></p>
+        </div>
+        <div class="lot-img">
+            <div class="img up" style="">
+                <img src="img/lot-chicken.png" alt="" style="height: 100%;width: auto;">
+            </div>
+        </div>
+        <div class="bottom-cloud">
+            <img src="img/bottom-cloud.png" alt="">
+        </div>
+        <section class="ewmShow">
+            <div>
+                识别右侧二维码<br>
+                快来抽取你的新年旺签吧！
+            </div>
+            <img src="img/ewm.png" alt="" >
+        </section>
+    </div>
+    <div class="btns">
+        <div class="onceAgain" onclick="$('#lots').hide();$('#index,.drum').show()">再试一次</div>
+        <div class="createPicture">生成图片</div>
+    </div>
+    <aside class="save-txt" style="bottom:1.5rem">长按保存图片</aside>
+</div>
 </body>
 <script>
     $(function(){
@@ -278,7 +279,6 @@
                 });
             }
         }
-
         //voiceStatu用來記録狀態,使 touchstart 事件只能觸發一次有效,避免與 click 事件衝突
         var voiceStatu = true;
         //监听 touchstart 事件进而调用 <audio> 元素提供的 play() 方法播放音频
@@ -289,29 +289,21 @@
             }
         }, false);
 
-
-//        $('.musicPlay').click(function() {
-//            // 依據 audio 的 paused 属性返回音频是否已暂停來判斷播放還是暫停音频。
-//            if (voice.paused) {
-//                voice.play();
-//                $('.musicPlay>p>img').attr('src', 'http://upload-images.jianshu.io/upload_images/6171922-4d23a92a9c256d0d.gif?imageMogr2/auto-orient/strip');
-//            } else {
-//                voice.pause();
-//                $('.musicPlay>p>img').attr('src', 'http://upload-images.jianshu.io/upload_images/6171922-e5206046b43e1efe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240');
-//            }
-//        });
-//        //监听浏览器能够开始播放这段音频时，发生的 canplay 事件来获取 <audio> 元素的 duration 属性.
-//        $("#voice").on("canplay", function() {
-//            $(".musicPlay>p>span>em").html(parseInt(voice.duration)+'" ');
-//        });
-
         function draw(){
             sharkBoolean = false;
             $('.drum').hide();
             $(".my-goodLot .lot-txt b").html(dataLots[id-1].animal);
             $(".saying").html(dataLots[id-1].txt);
             $(".my-goodLot .lot-img .img img").attr("src","img/lot-"+dataLots[id-1].class+".png");
-            setTimeout(function(){ voice.play();},1000);
+            setTimeout(function(){
+                (function audioAutoPlay() {
+                    var audio = document.getElementById('kaCi');
+                    audio.play();
+                    document.addEventListener("WeixinJSBridgeReady", function () {
+                        audio.play();
+                    }, false);
+                })();
+            },1000);
             $('.drum2').show().delay(2000).fadeOut(function(){
                 $('#index').hide();
                 $("#lots").show();

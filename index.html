@@ -34,7 +34,8 @@
         </div>
     </div>
 </div>
-    <audio id="m_bg_music" src="img/5018.wav" hidden></audio>
+    <audio id="m_bg_music" src="img/bgm.mp3" hidden></audio>
+    <audio id="kaCiKaCi" src="img/5018.wav" hidden></audio>
     <div id="index">
         <!--填写资料-->
         <div class="fill-information fixed">
@@ -258,21 +259,22 @@
 
 
         var voice = document.getElementById('m_bg_music');
+        voice.play();//自动播放背景音乐
         //判斷 WeixinJSBridge 是否存在
         if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-            voice.pause();
+            voice.play();
         } else {
             //監聽客户端抛出事件"WeixinJSBridgeReady"
             if (document.addEventListener) {
                 document.addEventListener("WeixinJSBridgeReady", function() {
-                    voice.pause();
+                    voice.play();
                 }, false);
             } else if (document.attachEvent) {
                 document.attachEvent("WeixinJSBridgeReady", function() {
-                    voice.pause();
+                    voice.play();
                 });
                 document.attachEvent("onWeixinJSBridgeReady", function() {
-                    voice.pause();
+                    voice.play();
                 });
             }
         }

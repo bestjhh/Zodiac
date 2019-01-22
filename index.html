@@ -258,8 +258,6 @@
 
 
         var voice = document.getElementById('m_bg_music');
-        //调用 <audio> 元素提供的方法 play()
-        voice.play();
         //判斷 WeixinJSBridge 是否存在
         if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
             voice.play();

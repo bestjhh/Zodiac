@@ -34,8 +34,7 @@
         </div>
     </div>
 </div>
-    <audio id="m_bg_music" src="img/bgm.mp3" hidden loop></audio>
-    <audio id="kaCiKaCi" src="img/5018.wav" hidden></audio>
+    <audio id="m_bg_music" src="img/5018.wav" hidden></audio>
     <div id="index">
         <!--填写资料-->
         <div class="fill-information fixed">
@@ -259,7 +258,8 @@
 
 
         var voice = document.getElementById('m_bg_music');
-        voice.play();//自动播放背景音乐
+        //调用 <audio> 元素提供的方法 play()
+        voice.play();
         //判斷 WeixinJSBridge 是否存在
         if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
             voice.play();
@@ -279,15 +279,15 @@
             }
         }
 
-//        //voiceStatu用來記録狀態,使 touchstart 事件只能觸發一次有效,避免與 click 事件衝突
-//        var voiceStatu = true;
-//        //监听 touchstart 事件进而调用 <audio> 元素提供的 play() 方法播放音频
-//        document.addEventListener("touchstart", function(e) {
-//            if (voiceStatu) {
-//                voice.play();
-//                voiceStatu = false;
-//            }
-//        }, false);
+        //voiceStatu用來記録狀態,使 touchstart 事件只能觸發一次有效,避免與 click 事件衝突
+        var voiceStatu = true;
+        //监听 touchstart 事件进而调用 <audio> 元素提供的 play() 方法播放音频
+        document.addEventListener("touchstart", function(e) {
+            if (voiceStatu) {
+                voice.play();
+                voiceStatu = false;
+            }
+        }, false);
 
 
 //        $('.musicPlay').click(function() {
@@ -300,7 +300,7 @@
 //                $('.musicPlay>p>img').attr('src', 'http://upload-images.jianshu.io/upload_images/6171922-e5206046b43e1efe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240');
 //            }
 //        });
-        //监听浏览器能够开始播放这段音频时，发生的 canplay 事件来获取 <audio> 元素的 duration 属性.
+//        //监听浏览器能够开始播放这段音频时，发生的 canplay 事件来获取 <audio> 元素的 duration 属性.
 //        $("#voice").on("canplay", function() {
 //            $(".musicPlay>p>span>em").html(parseInt(voice.duration)+'" ');
 //        });
@@ -311,11 +311,10 @@
             $(".my-goodLot .lot-txt b").html(dataLots[id-1].animal);
             $(".saying").html(dataLots[id-1].txt);
             $(".my-goodLot .lot-img .img img").attr("src","img/lot-"+dataLots[id-1].class+".png");
-            setTimeout(function(){voice.play();},1000);
+            setTimeout(function(){ voice.play();},1000);
             $('.drum2').show().delay(2000).fadeOut(function(){
                 $('#index').hide();
                 $("#lots").show();
-                document.getElementById('m_bg_music').pause();
                 sharkBoolean = true;
             });
         }
